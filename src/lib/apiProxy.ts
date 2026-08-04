@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-
-const API_BASE_URL = "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api";
+import { API_BASE_URL } from "@/lib/config";
 
 export async function apiProxy(request: Request, path: string) {
   try {
