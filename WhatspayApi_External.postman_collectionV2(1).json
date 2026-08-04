@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "91708660-b0a5-49c8-8645-56b936374eca",
+		"name": "WhatspayApi_External",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"91191120\",\r\n    \"password\": \"Lagos@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Auth/register",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"91191120\",\r\n  \"password\": \"Lagos@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Auth/login",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lookup",
+			"item": [
+				{
+					"name": "get bank list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Lookup/get-banks",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Lookup",
+								"get-banks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Products/get-product-list?vendorId=03dbe203-7595-41a8-9c6a-2c371e751b23",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Products",
+								"get-product-list"
+							],
+							"query": [
+								{
+									"key": "vendorId",
+									"value": "03dbe203-7595-41a8-9c6a-2c371e751b23"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Products/edit-product",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Products",
+								"edit-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"benz 190\",\r\n  \"ownerId\": \"06729a3c-b068-444b-990f-c773adaf3ef3\",\r\n  \"price\": 78000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Products/new-product",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Products",
+								"new-product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invoices",
+			"item": [
+				{
+					"name": "new invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"vendorId\": \"03dbe203-7595-41a8-9c6a-2c371e751b23\",\r\n  \"customerPhone\": \"09012345678\",\r\n  \"customerName\": \"kay Jones\",\r\n  \"items\": [\r\n    {\r\n      \"id\": 3,\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/Invoices/new-invoice",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Invoices",
+								"new-invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://whatspayapi-g7eedjebhwcjcvgd.ukwest-01.azurewebsites.net/api/invoices/invoice-history?vendorid=03dbe203-7595-41a8-9c6a-2c371e751b23",
+							"protocol": "https",
+							"host": [
+								"whatspayapi-g7eedjebhwcjcvgd",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"invoices",
+								"invoice-history"
+							],
+							"query": [
+								{
+									"key": "vendorid",
+									"value": "03dbe203-7595-41a8-9c6a-2c371e751b23"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
